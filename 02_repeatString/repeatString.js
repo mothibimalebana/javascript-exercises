@@ -1,11 +1,16 @@
 const repeatString = function(string, num) {
     let concatedString = string;
 
-    for(i = 1; i < num; i++) {
-        concatedString += string;
+    if (num == 0) 
+        concatedString = "";
+    else
+    {
+        for(i = 1; i < num; i++) {
+            concatedString += string;
+        }
+    
     }
-
-    return concatedString
+    return concatedString;
 };
 
 repeatString();
