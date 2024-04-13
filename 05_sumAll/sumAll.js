@@ -5,10 +5,15 @@
 const sumAll = function(u, v) {
     let i, partialSum;
     partialSum = 0;
-
-    for(i = u; i <= 4; i++)
+    if(u > v) {
+        for(i = v; i <= u; i++){
+            partialSum += i;
+        }
+    }
+    else{
+    for(i = u; i <= v; i++)
         partialSum += i;
-
+    }
     return partialSum
 };
 
