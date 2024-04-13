@@ -10,6 +10,12 @@ const sumAll = function(u, v) {
             partialSum += i;
         }
     }
+    else if(typeof(u) != "number" || typeof(v) != "number"){
+        return 'ERROR'
+    }
+    else if(u < 0 || v < 0) {
+        return 'ERROR'
+    }
     else{
     for(i = u; i <= v; i++)
         partialSum += i;
